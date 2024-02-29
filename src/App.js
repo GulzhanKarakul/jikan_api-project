@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom'
 import Login from "./pages/Login";
 import SignUp from "./pages/Signup";
 import Homepage from "./pages/Homepage";
@@ -16,7 +16,7 @@ import UserListedAnime from "./pages/UserLiked";
 
 export default function App() {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                 <Route exact path="/" element={<Homepage />} />
                 <Route exact path="/login" element={<Login />} />
@@ -29,6 +29,6 @@ export default function App() {
                 <Route exact path="/search" element={<Search />} />
                 <Route exact path="/mylist" element={<UserListedAnime />} />
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     )
 }
